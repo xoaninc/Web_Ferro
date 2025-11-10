@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        { "slug": "primary", "color": "#2d3748", "name": "Primario" },
+        { "slug": "secondary", "color": "#1A2F0F", "name": "Secundario" },
+        { "slug": "accent", "color": "#27ae60", "name": "Acento" },
+        { "slug": "light", "color": "#FFF", "name": "Blanco" },
+        { "slug": "dark", "color": "#212121", "name": "Oscuro" }
+      ],
+      "defaultPalette": true
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "Roboto, sans-serif",
+          "name": "Roboto",
+          "slug": "roboto"
+        }
+      ],
+      "fontSizes": [
+        { "slug": "small", "size": "14px", "name": "Pequeño" },
+        { "slug": "normal", "size": "17px", "name": "Normal" },
+        { "slug": "large", "size": "22px", "name": "Grande" }
+      ]
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true,
+      "units": ["px", "em", "rem", "%"]
+    },
+    "layout": {
+      "contentSize": "800px",
+      "wideSize": "1200px"
+    },
+    "custom": {
+      "logo": {
+        "height": "100px",
+        "width": "400px",
+        "flex-height": true,
+        "flex-width": true
+      }
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#FFF",
+      "text": "#333"
+    },
+    "typography": {
+      "fontFamily": "Roboto, sans-serif",
+      "fontSize": "17px"
+    },
+    "elements": {
+      "button": {
+        "color": {
+          "background": "#27ae60",
+          "text": "#FFF"
+        },
+        "border": {
+          "radius": "5px"
+        }
+      }
+    }
+  }
+}
