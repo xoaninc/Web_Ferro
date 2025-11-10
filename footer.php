@@ -1,45 +1,40 @@
+            </div>
         </div>
     </main>
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4><a href="<?php echo esc_url( get_permalink( get_page_by_path('faq') ) ); ?>">FAQ</a></h4>
-                </div>
-                <div class="footer-section">
-                    <h4><a href="<?php echo esc_url( get_permalink( get_page_by_path('politica-de-privacidad') ) ); ?>">Política de Privacidad</a></h4>
-                </div>
-                <div class="footer-section">
-                    <h4><a href="<?php echo esc_url( get_permalink( get_page_by_path('curiosidades') ) ); ?>">Curiosidades</a></h4>
-                    <div class="curiosidades-footer-list">
-                        <?php
-                        $curiosidades_query = new WP_Query([
-                            'post_type' => 'post',
-                            'posts_per_page' => 3,
-                            'orderby' => 'rand',
-                            'category_name' => 'curiosidades',
-                        ]);
-                        if ($curiosidades_query->have_posts()) {
-                            while ($curiosidades_query->have_posts()) {
-                                $curiosidades_query->the_post();
-                                echo '<div class="curiosidades-footer-item">';
-                                echo '<h5><a href="' . get_permalink() . '">' . get_the_title() . '</a></h5>';
-                                echo '<p>' . get_the_excerpt() . '</p>';
-                                echo '</div>';
-                            }
-                            wp_reset_postdata();
-                        } else {
-                            echo '<p>No hay curiosidades disponibles.</p>';
-                        }
-                        ?>
+                    <h4>FAQ - Preguntas Frecuentes</h4>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <h5>¿Qué es el ancho ibérico?</h5>
+                            <p>El ancho ibérico es la medida estándar de las vías ferroviarias en España y Portugal, diferente al ancho internacional.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h5>¿Cuándo se inauguró el primer ferrocarril en España?</h5>
+                            <p>El primer ferrocarril en España se inauguró en 1848, conectando Barcelona con Mataró.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h5>¿Qué velocidad alcanzan los trenes AVE?</h5>
+                            <p>Los trenes AVE pueden alcanzar velocidades de hasta 310 km/h en servicio comercial.</p>
+                        </div>
                     </div>
                 </div>
+                
+                <div class="footer-section">
+                    <h4>Política de Privacidad</h4>
+                    <p>Este blog respeta tu privacidad. No recopilamos información personal sin tu consentimiento. Los comentarios se almacenan localmente en tu navegador.</p>
+                    <p>Para más información, contacta con nosotros.</p>
+                </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; <?php echo date('Y'); ?> Blog Ferrocarril Esp. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+    
     <script>
     <?php
     $events = [];
@@ -65,6 +60,8 @@
     ?>
     const ferroblog_events = <?php echo json_encode($events); ?>;
     </script>
+    
     <?php wp_footer(); ?>
 </body>
 </html>
+

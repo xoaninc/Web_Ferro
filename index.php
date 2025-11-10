@@ -14,43 +14,31 @@
                 <h1><img src="<?php echo get_template_directory_uri(); ?>/images/logo-ferrocarril-esp.png" alt="Logo Ferrocarril Esp" class="logo-img"></h1>
             </div>
             <nav class="nav">
-               <nav class="nav">
-    <ul class="nav-menu">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="<?php echo home_url('/curiosidades/'); ?>">Curiosidades</a></li>
-        <li><a href="<?php echo home_url('/faq/'); ?>">FAQ</a></li>
-        <li><a href="<?php echo home_url('/noticias/'); ?>">Noticias</a></li>
-        <li class="dropdown">
-            <a href="<?php echo home_url('/infografia/'); ?>">Infografía ▼</a>
-            <ul class="dropdown-menu">
-                <li class="dropdown">
-                    <a href="#">Líneas ▶</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="<?php echo get_category_link(get_cat_ID('Ancho Ibérico')); ?>">Ancho Ibérico</a></li>
-                        <li><a href="<?php echo get_category_link(get_cat_ID('Ancho Métrico')); ?>">Ancho Métrico</a></li>
-                        <li><a href="<?php echo get_category_link(get_cat_ID('Ancho Internacional')); ?>">Ancho Internacional</a></li>
-                        <li><a href="<?php echo get_category_link(get_cat_ID('Otros Anchos')); ?>">Otros Anchos</a></li>
-                        <li><a href="<?php echo get_category_link(get_cat_ID('Líneas Cerradas')); ?>">Líneas Cerradas</a></li>
-                    </ul>
-                </li>
-                <li><a href="<?php echo home_url('/infografia/desarrollo-ciudades/'); ?>">Desarrollo de Ciudades</a></li>
-                <li><a href="<?php echo home_url('/estaciones/mapa-provincias.html'); ?>">Estaciones</a></li>
-                <li class="dropdown">
-                    <a href="#">Proyectos ▶</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="<?php echo get_category_link(get_cat_ID('Proyectos Cancelados')); ?>">Cancelados</a></li>
-                        <li><a href="<?php echo get_category_link(get_cat_ID('Proyectos en Marcha')); ?>">En Marcha</a></li>
-                        <li><a href="<?php echo get_category_link(get_cat_ID('Proyectos en Estudio')); ?>">En Estudio</a></li>
-                    </ul>
-                </li>
-                <li><a href="<?php echo home_url('/infografia/visualizacion-datos/'); ?>">Visualización de Datos</a></li>
-            </ul>
-        </li>
-        <li><a href="<?php echo home_url('/compra-billetes/'); ?>">Compra de Billetes</a></li>
-        <li><a href="<?php echo home_url('/eventos-ferroviarios/'); ?>">Eventos Ferroviarios</a></li>
-        <li><a href="<?php echo home_url('/visualizacion-avanzada/'); ?>">Visualización Avanzada</a></li>
-    </ul>
-</nav>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="<?php echo home_url('/lineas/'); ?>">Líneas ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?php echo get_category_link(get_cat_ID('Ancho ibérico')); ?>">Ancho ibérico</a></li>
+                            <li><a href="<?php echo get_category_link(get_cat_ID('Ancho métrico')); ?>">Ancho métrico</a></li>
+                            <li><a href="<?php echo get_category_link(get_cat_ID('Ancho internacional')); ?>">Ancho internacional</a></li>
+                            <li><a href="<?php echo get_category_link(get_cat_ID('Tipos de líneas')); ?>">Distintos tipos de líneas</a></li>
+                            <li><a href="<?php echo get_category_link(get_cat_ID('Líneas cerradas')); ?>">Líneas Cerradas</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="<?php echo home_url('/proyectos/'); ?>">Proyectos ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?php echo get_category_link(get_cat_ID('Proyectos cancelados')); ?>">Proyectos cancelados</a></li>
+                            <li><a href="<?php echo get_category_link(get_cat_ID('Proyectos actuales')); ?>">Proyectos actuales</a></li>
+                            <li><a href="<?php echo get_category_link(get_cat_ID('Proyectos en marcha')); ?>">Proyectos en marcha</a></li>
+                            <li><a href="<?php echo get_category_link(get_cat_ID('Proyectos en estudio')); ?>">Proyectos en estudio</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="<?php echo get_category_link(get_cat_ID('Curiosidades')); ?>">Curiosidades</a></li>
+                    <li><a href="<?php echo home_url('/noticias/'); ?>">Noticias</a></li>
+                    <li><a href="<?php echo home_url('/ciudades/'); ?>">Desarrollo ciudades</a></li>
+                    <li><a href="<?php echo home_url('/estaciones/'); ?>">Estaciones de tren</a></li>
                 </ul>
             </nav>
             <!-- Barra de búsqueda -->
@@ -76,6 +64,7 @@
                     <section id="inicio" class="section">
                         <h2><?php bloginfo('name'); ?></h2>
                         <p><?php bloginfo('description'); ?></p>
+
                         <div class="secciones-overview">
                             <h3>Secciones del Blog</h3>
                             <div class="secciones-grid">
@@ -160,6 +149,7 @@
                             </div>
                         </div>
                     </section>
+
                     <!-- Comments Section -->
                     <section class="comments-section">
                         <h3>Comentarios</h3>
@@ -186,6 +176,7 @@
                         ?>
                     </section>
                 </div>
+
                 <!-- Right Sidebar -->
                 <div class="sidebar">
                     <div class="author-info">
@@ -203,6 +194,7 @@
                         </div>
                         <h4 id="authorName"><?php echo get_the_author_meta('display_name', $author_id); ?></h4>
                         <p id="authorBio"><?php echo get_the_author_meta('description', $author_id) ?: 'Apasionado del ferrocarril español. Amante de la historia ferroviaria y las innovaciones del sector. Compartiendo conocimiento y curiosidades sobre el mundo del tren.'; ?></p>
+
                         <div class="social-links">
                             <h5>Redes Sociales</h5>
                             <div class="social-icons">
@@ -221,6 +213,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="quick-links">
                         <h3>Enlaces Rápidos</h3>
                         <ul>
@@ -229,6 +222,7 @@
                             <li><a href="#faq">FAQ - Preguntas Frecuentes</a></li>
                         </ul>
                     </div>
+
                     <!-- Calendario Ferroviario -->
                     <div class="railway-calendar">
                         <div class="calendar-content-wrapper">
@@ -243,6 +237,7 @@
                                     <!-- Los días se generan dinámicamente -->
                                 </div>
                             </div>
+
                             <!-- Leyenda de Colores del Calendario -->
                             <div class="calendar-legend">
                                 <h4>Leyenda de Eventos</h4>
@@ -275,10 +270,12 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Sistema de Filtrado Avanzado por Categorías -->
                     <div class="advanced-filter">
                         <h3>🔍 Filtro Avanzado</h3>
                         <p class="filter-description">Selecciona múltiples categorías para encontrar contenido específico</p>
+
                         <!-- Sección Histórico -->
                         <div class="filter-section">
                             <div class="section-header" onclick="toggleCategorySection('historico')">
@@ -320,6 +317,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- Sección Noticias -->
                         <div class="filter-section">
                             <div class="section-header" onclick="toggleCategorySection('noticias')">
@@ -377,6 +375,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- Sección Ciudades -->
                         <div class="filter-section">
                             <div class="section-header" onclick="toggleCategorySection('ciudades')">
@@ -414,6 +413,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <!-- Botones de control -->
                         <div class="filter-controls">
                             <button class="btn-filter" onclick="applyCategoryFilter()" disabled>
@@ -423,6 +423,7 @@
                                 Limpiar Filtros
                             </button>
                         </div>
+
                         <!-- Resultados del filtrado -->
                         <div id="filterResults" class="filter-results" style="display: none;">
                             <h4>Resultados del Filtrado</h4>
@@ -433,6 +434,7 @@
             </div>
         </div>
     </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -454,17 +456,20 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="footer-section">
                     <h4>Política de Privacidad</h4>
                     <p>Este blog respeta tu privacidad. No recopilamos información personal sin tu consentimiento. Los comentarios se almacenan localmente en tu navegador.</p>
                     <p>Para más información, contacta con nosotros.</p>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+
     <?php wp_footer(); ?>
 </body>
 </html>

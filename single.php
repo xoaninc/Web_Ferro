@@ -24,12 +24,6 @@
 
             <div class="article-content">
                 <?php the_content(); ?>
-                <?php
-                wp_link_pages(array(
-                    'before' => '<div class="page-links">' . esc_html__('Páginas:', 'ferrocarril-esp'),
-                    'after'  => '</div>',
-                ));
-                ?>
             </div>
 
             <div class="article-copyright">
@@ -53,6 +47,7 @@
 
         <section class="comments-section">
             <?php
+            // Si los comentarios están abiertos o hay al menos un comentario, se carga la plantilla de comentarios.
             if ( comments_open() || get_comments_number() ) :
                 comments_template();
             endif;
@@ -63,3 +58,4 @@
     </div>
     <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+

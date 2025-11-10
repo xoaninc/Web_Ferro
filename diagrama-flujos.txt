@@ -1,0 +1,181 @@
+─────────────────────────────
+DIAGRAMA DE FLUJO DE NAVEGACIÓN BLOG FERROVIARIO
+─────────────────────────────
+
+Inicio
+│
+├─── Curiosidades
+│
+├─── FAQ (Preguntas Frecuentes)
+│
+├─── Noticias
+│    │
+│    └─── Ciudades
+│         ├─── Sevilla
+│         ├─── Madrid
+│         ├─── Barcelona
+│         ├─── Valencia
+│         ├─── Bilbao
+│         └─── A Coruña
+│
+├─── Infografía
+│    │
+│    ├─── Líneas
+│    │    ├─── Ancho Ibérico
+│    │    ├─── Ancho Métrico
+│    │    ├─── Ancho Internacional
+│    │    ├─── Tipos de Líneas
+│    │    └─── Líneas Cerradas
+│    │
+│    ├─── Ciudades
+│    │    └─── (Mismas ciudades que en Noticias)
+│    │
+│    ├─── Estaciones
+│    │    └─── Mapa por Provincias
+│    │
+│    └─── Proyectos
+│         ├─── Proyectos Cancelados
+│         ├─── Proyectos Actuales
+│         ├─── Proyectos en Marcha
+│         └─── Proyectos en Estudio
+│
+└─── Compra de Billetes
+
+─────────────────────────────
+REPRESENTACIÓN EN MÚSCARA DE MENTÓN
+─────────────────────────────
+
+Inicio
+│
+%% Nivel 1: Relación "secciones"
+Inicio --> Curiosidades
+Inicio --> FAQ
+Inicio --> Noticias
+Inicio --> Infografía
+Inicio --> Compra_Billetes
+
+%% Nivel 2: Relación "categoría"
+Noticias --> Ciudades
+Infografía --> Líneas
+Infografía --> Ciudades
+Infografía --> Estaciones
+Infografía --> Proyectos
+
+%% Nivel 3: Sub-items
+Líneas --> Ancho_Ibérico
+Líneas --> Ancho_Métrico
+Líneas --> Ancho_Internacional
+Líneas --> Tipos_Líneas
+Líneas --> Líneas_Cerradas
+
+Estaciones --> Mapa_Provincias
+
+Ciudades --> Sevilla
+Ciudades --> Madrid
+Ciudades --> Barcelona
+Ciudades --> Valencia
+Ciudades --> Bilbao
+Ciudades --> A_Coruña
+
+Proyectos --> Proyectos_Cancelados
+Proyectos --> Proyectos_Actuales
+Proyectos --> Proyectos_En_Marcha
+Proyectos --> Proyectos_En_Estudio
+
+─────────────────────────────
+SUGERENCIAS DE MEJORA PARA EL DIAGRAMA
+─────────────────────────────
+
+1. NAVEGACIÓN PRINCIPAL:
+   - Las secciones principales deberían tener botones de acceso desde la página de inicio
+   - Implementar menú desplegable para secciones con sub-items
+   - Añadir breadcrumbs (migas de pan) para mejor orientación
+
+2. EXPERIENCIA DE USUARIO:
+   - Los sub-items pueden ser menús desplegables o tarjetas de acceso rápido
+   - Implementar navegación secundaria entre sub-items relacionados
+   - Ejemplo: desde "Mapa Provincias" poder ir a "Distintas Ciudades"
+
+3. ESTRUCTURA DE ARCHIVOS:
+   - Asegurar que cada categoría o sub-item esté representado en la estructura de archivos html/php
+   - Verificar que todas las rutas del diagrama tengan su correspondiente archivo o plantilla
+
+4. CATEGORÍAS WORDPRESS:
+   - Mapear cada sección del diagrama con categorías de WordPress
+   - Crear taxonomías personalizadas si es necesario (por ejemplo, para "Tipo de Línea")
+   - Implementar filtros avanzados por categorías
+
+5. NAVEGACIÓN LATERAL:
+   - Añadir widget de "Enlaces Rápidos" en la barra lateral
+   - Implementar sistema de búsqueda avanzada por categorías
+   - Añadir calendario ferroviario con eventos destacados
+
+6. MEJORAS ADICIONALES:
+   - Añadir enlaces relacionados al final de cada artículo
+   - Implementar sistema de etiquetas (tags) además de categorías
+   - Crear página de archivo para cada categoría principal
+   - Añadir paginación en listados de posts
+
+─────────────────────────────
+MAPEO DE CATEGORÍAS WORDPRESS
+─────────────────────────────
+
+Categorías Históricas:
+- ancho-iberico → Ancho Ibérico
+- ancho-metrico → Ancho Métrico
+- ancho-internacional → Ancho Internacional
+- lineas-cerradas → Líneas Cerradas
+- proyectos-cancelados → Proyectos Cancelados
+- proyectos-actuales → Proyectos Actuales
+- proyectos-en-marcha → Proyectos en Marcha
+- proyectos-en-estudio → Proyectos en Estudio
+
+Categorías de Noticias:
+- noticias → Noticias
+- metro → Metro
+- tranvia → Tranvía
+- ave → AVE
+- cercanias → Cercanías
+- apertura-linea → Apertura de Línea
+- inicio-obras → Inicio de Obras
+- fin-obras → Fin de Obras
+- evento-especial → Evento Especial
+- mantenimiento → Mantenimiento
+- aniversario → Aniversario
+- cambio-horarios → Cambio de Horarios
+
+Categorías de Ciudades:
+- sevilla → Sevilla
+- madrid → Madrid
+- barcelona → Barcelona
+- valencia → Valencia
+- bilbao → Bilbao
+- a-coruna → A Coruña
+
+─────────────────────────────
+ESTRUCTURA DE RUTAS URL
+─────────────────────────────
+
+/ (Inicio)
+/curiosidades.html
+/compra-billetes.html
+/noticias/
+/noticias/ciudad/[nombre-ciudad]/
+/lineas/
+/lineas/ancho-iberico.html
+/lineas/ancho-metrico.html
+/lineas/ancho-internacional.html
+/lineas/tipos-lineas.html
+/lineas/lineas-cerradas.html
+/proyectos/
+/proyectos/proyectos-cancelados.html
+/proyectos/proyectos-actuales.html
+/proyectos/proyectos-en-marcha.html
+/proyectos/proyectos-estudio.html
+/ciudades/
+/ciudades/[nombre-ciudad].html
+/estaciones/
+/estaciones/mapa-provincias.html
+/category/[slug-categoria]/
+/[slug-post]/
+

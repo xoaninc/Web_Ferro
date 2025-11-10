@@ -1,0 +1,130 @@
+─────────────────────────────
+ESQUEMA DE CARPETAS Y ARCHIVOS PARA TEMA WORDPRESS MODERNO
+─────────────────────────────
+
+/
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── inc/
+│   └── functions-helpers.php
+├── parts/
+│   ├── footer.html
+│   ├── header.html
+├── patterns/
+│   └── example.php
+├── styles/
+│   └── my-variation.json
+├── templates/
+│   ├── 404.html
+│   ├── archive.html
+│   ├── index.html    (obligatorio)
+│   ├── singular.html
+├── README.txt
+├── CHANGELOG.md (opcional)
+├── LICENSE.md (opcional)
+├── editorconfig (opcional)
+├── functions.php  (para lógica PHP)
+├── package.json   (opcional)
+├── screenshot.png (1200x900 obligatorio para publicar)
+├── style.css      (obligatorio)
+├── theme.json     (imprescindible para blocks)
+
+─────────────────────────────
+ESTRUCTURA ACTUAL DEL TEMA FERROCARRIL ESP
+─────────────────────────────
+
+Este tema es un TEMA CLÁSICO de WordPress (no un tema de bloques),
+por lo que la estructura es ligeramente diferente:
+
+/
+├── images/                    (imágenes del tema)
+│   ├── logo-ferrocarril-esp.png
+│   └── Icono web.png
+├── ciudades/                  (páginas estáticas HTML)
+├── desarrollo-ciudades/       (páginas estáticas HTML)
+├── estaciones/                (páginas estáticas HTML)
+├── estaciones-tren/           (páginas estáticas HTML)
+├── informacion/               (páginas estáticas HTML)
+├── lineas/                    (páginas estáticas HTML)
+├── noticias/                  (páginas estáticas HTML)
+├── proyectos/                 (páginas estáticas HTML)
+├── comments.php               (plantilla de comentarios)
+├── config.js                  (configuración JavaScript)
+├── footer.php                 (pie de página)
+├── functions.php              (funcionalidades del tema)
+├── header.php                 (encabezado)
+├── index.php                  (plantilla principal - OBLIGATORIO)
+├── script.js                  (JavaScript principal)
+├── sidebar.php                (barra lateral)
+├── single.php                 (plantilla de entrada individual)
+├── style.css                  (encabezado del tema - OBLIGATORIO)
+├── styles.css                 (estilos principales)
+├── theme.json                 (configuración del tema - NUEVO)
+├── wp-search.js               (búsqueda WordPress)
+└── wp-style.css               (estilos WordPress)
+
+─────────────────────────────
+PLANTILLA DE ENCABEZADO style.css
+─────────────────────────────
+
+/*
+Theme Name: Ferrocarril Esp
+Theme URI: http://tusitio.com/ferrocarril-esp
+Author: Blog Ferrocarril Esp
+Author URI: http://tusitio.com
+Description: Tema WordPress para web de trenes y blog ferroviario. Mantiene la estructura estática original con integración de WordPress para posts y búsqueda.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: trenes-theme
+Tags: blog, trains, news, railway, ferrocarril, block theme
+*/
+
+─────────────────────────────
+EJEMPLO theme.json
+─────────────────────────────
+
+{
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        { "slug": "primary", "color": "#1A2F0F", "name": "Principal" },
+        { "slug": "accent",  "color": "#f59e42", "name": "Acento" }
+      ]
+    },
+    "typography": {
+      "fontSizes": [
+        { "slug": "normal", "size": "18px", "name": "Normal" },
+        { "slug": "large",  "size": "24px", "name": "Grande" }
+      ]
+    }
+  }
+}
+
+─────────────────────────────
+NOTAS IMPORTANTES
+─────────────────────────────
+
+1. Para temas CLÁSICOS de WordPress (como este):
+   - Los archivos PHP en la raíz están bien (index.php, header.php, footer.php, etc.)
+   - No es necesario tener templates/ con archivos HTML
+   - theme.json es opcional pero recomendado
+
+2. Para temas de BLOQUES (Block Themes):
+   - Se requieren templates/ con archivos HTML
+   - theme.json es obligatorio
+   - Se usan parts/ para componentes reutilizables
+
+3. Archivos OBLIGATORIOS para cualquier tema:
+   - style.css (con encabezado completo)
+   - index.php (plantilla principal)
+   - functions.php (recomendado)
+
+4. Archivos RECOMENDADOS:
+   - screenshot.png (1200x900px) - para mostrar en el admin
+   - README.txt - documentación del tema
+   - theme.json - configuración moderna del tema
+

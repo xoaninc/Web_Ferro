@@ -1,17 +1,17 @@
 /*
 Theme Name: Ferrocarril Esp
-Theme URI: https://github.com/xoaninc/P-gina-web-Ferrocarril
-Author: Xoan Macias
-Author URI: https://github.com/xoaninc
-Description: Tema WordPress moderno para blog sobre ferrocarriles en España. Compatible con sistemas de categorías, taxonomía ciudad, menús dinámicos y personalización avanzada.
-Version: 1.0.0
+Theme URI: http://tusitio.com/ferrocarril-esp
+Author: Blog Ferrocarril Esp
+Author URI: http://tusitio.com
+Description: Tema WordPress para web de trenes y blog ferroviario. Mantiene la estructura estática original con integración de WordPress para posts y búsqueda.
+Version: 1.0
 License: GNU General Public License v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: ferrocarril-esp
-Tags: blog, tren, ferrocarril, transporte, custom-post-types, block-themes
-Requires at least: 5.8
-Tested up to: 6.4
-Requires PHP: 7.4
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: trenes-theme
+Tags: blog, trains, news, railway, ferrocarril, block theme
 */
 
-/* Este archivo es requerido por WordPress para reconocer el tema. No incluir @import ni estilos aquí. Todos los estilos deben cargarse por functions.php usando wp_enqueue_style(). */
+/* Este archivo es requerido por WordPress para reconocer el tema */
+/* Los estilos principales están en styles.css */
+
+@import url("styles.css");
